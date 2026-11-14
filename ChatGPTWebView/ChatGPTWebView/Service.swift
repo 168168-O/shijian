@@ -17,7 +17,7 @@ enum Service: CaseIterable {
     }
 
     var title: String {
-        "诗鉴"
+        "达货爱姑娘"
     }
 
     var tabIconSystemName: String {
