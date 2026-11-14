@@ -63,13 +63,13 @@ a{color:var(--cinnabar);text-decoration:none}
 .brand h1{font-family:var(--serif);font-size:var(--fs-hero);margin:0;letter-spacing:.04em;line-height:1.15;font-weight:700;width:100%}
 .brand .sub{font-size:var(--fs-xs);color:var(--ink-3);letter-spacing:.18em;margin-top:.15rem}
 .mh-meta{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;font-size:var(--fs-xs);color:var(--ink-3)}
-.chip{border:1px solid var(--line);padding:.15rem .5rem;border-radius:2px;background:rgba(255,255,255,.4);white-space:nowrap}
+.chip{border:1px solid var(--line);padding:.15rem .5rem;border-radius:2px;background:var(--glass-chip);white-space:nowrap}
 .chip b{color:var(--ink);font-weight:600}
 .chip.red{border-color:rgba(179,53,43,.35);color:var(--cinnabar);background:var(--cinnabar-soft)}
 .chip.jade{border-color:rgba(61,107,88,.35);color:var(--jade);background:var(--jade-soft)}
 
 /* ---------- 导航 (App底栏风格适配) ---------- */
-.nav{display:flex;gap:0;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30;background:rgba(247,242,230,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin:0 -.2rem .9rem;padding:0 .2rem}
+.nav{display:flex;gap:0;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30;background:var(--glass-nav);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin:0 -.2rem .9rem;padding:0 .2rem}
 .nav::-webkit-scrollbar{display:none}
 .nav button{appearance:none;background:none;border:0;border-bottom:2px solid transparent;padding:.72rem clamp(.55rem,1.6vw,.95rem);font-size:var(--fs-sm);color:var(--ink-3);cursor:pointer;white-space:nowrap;font-family:var(--sans);transition:color .18s,border-color .18s;letter-spacing:.04em;}
 .nav button:hover{color:var(--ink)}
@@ -259,88 +259,13 @@ details{background:var(--glass-details);backdrop-filter:blur(10px);-webkit-backd
 .chart .axis-t{fill:var(--ink-3)}
 .rk .bar{background:var(--grid)}
 .seal{border-radius:6px}
-/* 主题切换球 */
-.themebad{position:fixed;right:8px;top:50%;transform:translateY(-50%);z-index:120;display:flex;flex-direction:column;gap:8px;
-  padding:9px 6px;border-radius:999px;background:var(--glass-card);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);
-  border:1px solid var(--glass-border);box-shadow:0 6px 20px -10px rgba(0,0,0,.4)}
-.themebad button{width:18px;height:18px;border-radius:50%;border:2px solid rgba(255,255,255,.85);cursor:pointer;padding:0;appearance:none;box-shadow:0 1px 4px rgba(0,0,0,.3);transition:transform .15s}
-.themebad button:hover{transform:scale(1.25)}
-.themebad button.on{outline:2px solid var(--cinnabar);outline-offset:2px}
 .card,.chip,.nav,.tw,.stat,.note,details,.chart,input,select,textarea,button.btn{
   transition:background-color .35s ease,border-color .35s ease,color .35s ease,box-shadow .35s ease}
 
-/* ---------- 主题 · 墨玉夜宴 ---------- */
-html[data-theme="night"]{
-  --paper:#141009; --paper-2:#1c1712; --paper-3:#241e16;
-  --ink:#efe6d4; --ink-2:#cfc3ab; --ink-3:#a2967f; --ink-4:#6e6350;
-  --line:rgba(240,230,210,.14); --line-2:rgba(240,230,210,.08);
-  --cinnabar:#e0655a; --gold:#c99b52; --jade:#6fae8f;
-  --cinnabar-soft:rgba(224,101,90,.14); --gold-soft:rgba(201,155,82,.14); --jade-soft:rgba(111,174,143,.13);
-  --glass-card:rgba(30,24,17,.55); --glass-border:rgba(240,230,210,.16); --glass-hi:rgba(255,255,255,.09);
-  --glass-chip:rgba(30,24,17,.5); --glass-input:rgba(20,16,10,.5); --glass-inputfocus:rgba(20,16,10,.72);
-  --glass-ghost:rgba(240,230,210,.08); --glass-tw:rgba(20,16,10,.4); --glass-th:rgba(240,230,210,.09);
-  --glass-trhover:rgba(240,230,210,.09); --glass-stat:rgba(30,24,17,.5); --glass-details:rgba(30,24,17,.45);
-  --glass-chart:rgba(20,16,10,.4); --glass-nav:rgba(20,16,10,.55); --glass-navm:rgba(20,16,10,.62);
-  --glass-navborder:rgba(240,230,210,.12);
-  --blob1:rgba(224,101,90,.12); --blob2:rgba(201,155,82,.13); --blob3:rgba(111,174,143,.09);
-  --g1:rgba(224,101,90,.10); --g2:rgba(201,155,82,.10); --g3:rgba(111,174,143,.07);
-  --grid:rgba(240,230,210,.12);
-}
-/* ---------- 主题 · 霞红琉璃 ---------- */
-html[data-theme="rouge"]{
-  --paper:#190d0b; --paper-2:#22120f; --paper-3:#2c1714;
-  --ink:#f5e6dd; --ink-2:#d4b8ab; --ink-3:#a98d7f; --ink-4:#74584c;
-  --line:rgba(245,230,220,.15); --line-2:rgba(245,230,220,.08);
-  --cinnabar:#e8766a; --gold:#d0a05c; --jade:#74b394;
-  --cinnabar-soft:rgba(232,118,106,.15); --gold-soft:rgba(208,160,92,.13); --jade-soft:rgba(116,179,148,.12);
-  --glass-card:rgba(58,26,22,.5); --glass-border:rgba(255,225,210,.16); --glass-hi:rgba(255,255,255,.1);
-  --glass-chip:rgba(58,26,22,.46); --glass-input:rgba(30,14,12,.55); --glass-inputfocus:rgba(30,14,12,.75);
-  --glass-ghost:rgba(255,225,210,.09); --glass-tw:rgba(30,14,12,.4); --glass-th:rgba(255,225,210,.1);
-  --glass-trhover:rgba(255,225,210,.1); --glass-stat:rgba(58,26,22,.46); --glass-details:rgba(58,26,22,.42);
-  --glass-chart:rgba(30,14,12,.4); --glass-nav:rgba(30,14,12,.55); --glass-navm:rgba(30,14,12,.62);
-  --glass-navborder:rgba(255,225,210,.13);
-  --blob1:rgba(232,118,106,.15); --blob2:rgba(208,160,92,.12); --blob3:rgba(255,120,150,.08);
-  --g1:rgba(232,118,106,.13); --g2:rgba(208,160,92,.10); --g3:rgba(255,120,150,.06);
-  --grid:rgba(245,230,220,.13);
-}
-/* ---------- 主题 · 翡翠琉璃 ---------- */
-html[data-theme="jade"]{
-  --paper:#0e1712; --paper-2:#152019; --paper-3:#1c2a21;
-  --ink:#e4efe4; --ink-2:#bdd0bd; --ink-3:#8ba189; --ink-4:#5c7260;
-  --line:rgba(228,239,228,.14); --line-2:rgba(228,239,228,.08);
-  --cinnabar:#e0655a; --gold:#cfa457; --jade:#5fbe91;
-  --cinnabar-soft:rgba(224,101,90,.13); --gold-soft:rgba(207,164,87,.13); --jade-soft:rgba(95,190,145,.14);
-  --glass-card:rgba(22,44,34,.52); --glass-border:rgba(220,245,230,.15); --glass-hi:rgba(255,255,255,.09);
-  --glass-chip:rgba(22,44,34,.48); --glass-input:rgba(10,20,15,.55); --glass-inputfocus:rgba(10,20,15,.75);
-  --glass-ghost:rgba(220,245,230,.08); --glass-tw:rgba(10,20,15,.4); --glass-th:rgba(220,245,230,.09);
-  --glass-trhover:rgba(220,245,230,.1); --glass-stat:rgba(22,44,34,.48); --glass-details:rgba(22,44,34,.44);
-  --glass-chart:rgba(10,20,15,.4); --glass-nav:rgba(10,20,15,.55); --glass-navm:rgba(10,20,15,.62);
-  --glass-navborder:rgba(220,245,230,.12);
-  --blob1:rgba(95,190,145,.13); --blob2:rgba(207,164,87,.11); --blob3:rgba(80,180,200,.08);
-  --g1:rgba(95,190,145,.10); --g2:rgba(207,164,87,.09); --g3:rgba(80,180,200,.06);
-  --grid:rgba(228,239,228,.12);
-}
-/* ---------- 主题 · 紫霭琉璃 ---------- */
-html[data-theme="violet"]{
-  --paper:#151020; --paper-2:#1d1729; --paper-3:#251d35;
-  --ink:#ece5f5; --ink-2:#c7bcdc; --ink-3:#9a8cb3; --ink-4:#675a80;
-  --line:rgba(236,229,245,.14); --line-2:rgba(236,229,245,.08);
-  --cinnabar:#e8766a; --gold:#cfa0d8; --jade:#7fc2b0;
-  --cinnabar-soft:rgba(232,118,106,.14); --gold-soft:rgba(207,160,216,.13); --jade-soft:rgba(127,194,176,.12);
-  --glass-card:rgba(44,32,72,.5); --glass-border:rgba(230,220,255,.16); --glass-hi:rgba(255,255,255,.1);
-  --glass-chip:rgba(44,32,72,.46); --glass-input:rgba(22,16,34,.55); --glass-inputfocus:rgba(22,16,34,.75);
-  --glass-ghost:rgba(230,220,255,.09); --glass-tw:rgba(22,16,34,.4); --glass-th:rgba(230,220,255,.09);
-  --glass-trhover:rgba(230,220,255,.1); --glass-stat:rgba(44,32,72,.46); --glass-details:rgba(44,32,72,.42);
-  --glass-chart:rgba(22,16,34,.4); --glass-nav:rgba(22,16,34,.55); --glass-navm:rgba(22,16,34,.62);
-  --glass-navborder:rgba(230,220,255,.13);
-  --blob1:rgba(167,120,240,.14); --blob2:rgba(240,120,180,.11); --blob3:rgba(90,140,250,.09);
-  --g1:rgba(167,120,240,.12); --g2:rgba(240,120,180,.09); --g3:rgba(90,140,250,.07);
-  --grid:rgba(236,229,245,.12);
-}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
   .card,.chip,.tw,.stat,.rk,details,.chart{background:var(--glass-card)}
   .card,.chip,.tw,.stat,.rk,details,.chart{opacity:1}
-  html:not([data-theme]) .card,html[data-theme=""] .card{background:rgba(255,252,245,.85)}
+  html:not([data-ui-theme]) .card{background:rgba(255,252,245,.85)}
   input[type=text],input[type=number],input[type=date],select,textarea{background:rgba(255,255,255,.9)}
 }
 
@@ -366,6 +291,8 @@ html[data-theme="violet"]{
   .switch{min-height:36px}
 }
 </style>
+<link rel="stylesheet" href="./premium-themes-v2.css">
+<script src="./premium-themes-v2.js" defer></script>
 </head>
 <body>
 <div class="app">
@@ -714,34 +641,6 @@ html[data-theme="violet"]{
 </div>
 
 <div class="toast" id="toast"></div>
-<script>/* 主题切换器（纯 UI，不碰任何功能） */
-(function(){
-  var THEMES=[
-    ['',          '宣纸玻璃（默认）', 'linear-gradient(135deg,#f7f2e6,#e6dbc4)'],
-    ['night',     '墨玉夜宴',         '#141009'],
-    ['rouge',     '霞红琉璃',         '#190d0b'],
-    ['jade',      '翡翠琉璃',         '#0e1712'],
-    ['violet',    '紫霭琉璃',         '#151020']
-  ];
-  var root=document.documentElement;
-  var saved='';
-  try{saved=localStorage.getItem('sj_theme')||''}catch(e){}
-  root.setAttribute('data-theme',saved);
-  var bar=document.createElement('div');bar.className='themebad';bar.setAttribute('aria-label','主题切换');
-  THEMES.forEach(function(t){
-    var b=document.createElement('button');
-    b.type='button';b.title=t[1];b.style.background=t[2];
-    b.onclick=function(){
-      root.setAttribute('data-theme',t[0]);
-      try{localStorage.setItem('sj_theme',t[0])}catch(e){}
-      [].forEach.call(bar.children,function(c){c.classList.toggle('on',c===b)});
-    };
-    bar.appendChild(b);
-  });
-  function mark(){[].forEach.call(bar.children,function(c,i){c.classList.toggle('on',THEMES[i][0]===root.getAttribute('data-theme'))})}
-  document.body.appendChild(bar);
-  mark();
-})();</script>
 <script>/* ============================================================
    36宝诗鉴 · 核心算法层
    v1.0.2  —  纯前端、PWA 离线支持
