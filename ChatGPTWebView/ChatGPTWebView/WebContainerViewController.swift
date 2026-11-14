@@ -120,6 +120,12 @@ final class WebContainerViewController: UIViewController, WKNavigationDelegate, 
         newWebView.allowsBackForwardNavigationGestures = true
         newWebView.backgroundColor = .systemBackground
         newWebView.isOpaque = false
+        // 锁定滚动手感：关闭橡皮筋弹回，页面固定不拖拽
+        newWebView.scrollView.bounces = false
+        newWebView.scrollView.alwaysBounceVertical = false
+        newWebView.scrollView.alwaysBounceHorizontal = false
+        newWebView.scrollView.isDirectionalLockEnabled = true
+        newWebView.scrollView.contentInsetAdjustmentBehavior = .never
         view.insertSubview(newWebView, belowSubview: activityIndicator)
         webView = newWebView
         loadLastURLIfNeeded()
